@@ -39,6 +39,15 @@
                         <div class="text-center text-white">
                             <!-- Page heading-->
                             <h1 class="mb-5">Nuestra Pagina de Django Intermedia! 27620</h1>
+
+
+
+
+
+
+
+
+
                             
                         </div>
                     </div>
@@ -46,6 +55,24 @@
             </div>
         </header>
         
+        {% if miFormulario.errors %}
+        <p style="color: red;"> Estan mal los datos, Enviar nuevamente</p>
+
+        {% endif %}
+        <p>
+            <form action="" method="POST">{% csrf_token %}
+
+                <table>
+                    {{ miFormulario.as_table }}
+                </table>
+                        
+                <input type="submit", value="enviar">
+
+            </form>
+        </p>
+
+
+
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
