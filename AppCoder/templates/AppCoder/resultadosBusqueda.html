@@ -1,21 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Estamos buscando la comision {{comision}} </p>
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{% if not respuesta %}
+
+<h1>estamos buscando los cursos de la comision: {{comision}}</h1>
+
+
+
 {% if cursos %}
-    <ul> 
-        {% for curso in cursos %}
-        <li> {{curso.nombre}} </li>
-        <li> {{curso.comision}} </li>
-        {% endfor %}
-    </ul>
+
+<ul>
+{% for curso in cursos %}
+    <li>{{curso.nombre}}</li>
+    <li>{{curso.comision}}</li>
+    <br>
+
+{% endfor %}
+</ul>
+
+{% else %}
+<p>NO SE ENCONTRARON DATOS PARA ESA COMISION!</p>
+{% endif %}
+
+{% else %}
+
+
+<h1 style="color:red"> {{respuesta}}</h1>
 
 {% endif %}
-</body>
-</html>
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1 >Encontra los cursos por comision</h1>
+
+{% endblock %}

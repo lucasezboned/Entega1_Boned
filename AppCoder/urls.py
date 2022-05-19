@@ -3,17 +3,17 @@ from .views import *
 
 
 urlpatterns = [
-    path('', inicio),
+    path('', inicio, name='inicio'),
     
-    path('creaCurso', curso),
+   # path('creaCurso', curso),
     
-    path('cursos/', cursos),
-    path('profesores/', profesores),
-    path('estudiantes/', estudiantes),
-    path('entregables/', entregables),
-    path('busquedaCamada/', busquedaCamada, name='BusquedaCamada'),
-    path('buscar/', buscar),
-    path('resultadosBusqueda/', buscar)
-     ]
+    path('cursos/', cursos, name='cursos'),
+    path('profesores/', profesores, name='profesores'),
+    path('estudiantes/', estudiantes, name='estudiantes'),
+    path('espacioenaulas/', espacioenaulas, name='espacioenaulas'),
+   # path('cursosFormulario/', cursosFormulario, name='cursosFormulario'),
+    path('busquedaComision/', busquedaComision, name='busquedaComision'),
+    path('buscar/', buscar, name='buscar'),
     
 
+]

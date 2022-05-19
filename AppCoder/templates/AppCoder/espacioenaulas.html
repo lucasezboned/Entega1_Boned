@@ -13,7 +13,7 @@
 {% endif %}
 
 
-<form action="{% url 'profesores' %}" method="post">{% csrf_token %}
+<form action="{% url 'espacioenaulas' %}" method="post">{% csrf_token %}
 
     <table>
         {{ formulario.as_table}}
@@ -27,6 +27,6 @@
 
 {% block titulo %}
 
-    <h1 >Agrega un profesor</h1>
+    <h1 >Agrega el espacio (aforo) de aula y el aula</h1>
 
 {% endblock %}
