@@ -1,9 +1,9 @@
 # django27620
 Hola, dejo la guia para probar:
 
-En el inicio hay 3 secciones que son para agregar profesores, cursos o personas
+*En el inicio hay 3 secciones que son para agregar profesores, cursos o personas.
 
-y hay otro para buscar cursos
+*Y hay otra seccion para buscar cursos.
 
 
 Aclaracion:
